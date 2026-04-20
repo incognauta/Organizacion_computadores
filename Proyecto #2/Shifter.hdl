@@ -1,0 +1,30 @@
+/*********
+ * Shifter.hdl – Desplazamiento de un bit a la izquierda o derecha
+ * Autor 1:
+ * Autor 2:
+ *
+ * Implementación del siguiente algoritmo:
+ * if (direction == 0){
+ *     out[0] = 0;
+ *     for(i=2; i < 16; i++)
+ *         out[i] = in[i-1];
+ * }
+ * else{
+ *     out[15] = 0;
+ *     for(i=1; i < 15; i++)
+ *         out[i] = in[i-1];
+ * }
+ *********/
+
+CHIP Shifter {
+    IN in[16],      // Dato a correr
+       direction;   // Dirección de corrimiento
+                    // 0 = izquierda, 1 = derecha
+    
+    OUT out[16],    // Dato corrido en la dirección solicitada
+        result;     // Bit que sale por el extremo 
+                    // correspondiente
+    
+    PARTS:
+    // Incluya su código aquí
+}
