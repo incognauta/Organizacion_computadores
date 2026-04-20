@@ -1,0 +1,58 @@
+MIT License
+
+Copyright (c) 2026 Estudiantes de Ingeniería de Sistemas - EAFIT
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Sobre esta Licencia
+
+Este proyecto es académico y forma parte del curso de Organización de Computadores
+en la Universidad EAFIT. La licencia MIT permite:
+
+✅ Uso comercial
+✅ Modificación
+✅ Distribución
+✅ Uso privado
+
+⚠️ Requisitos:
+- Incluir la licencia y aviso de derechos de autor
+- Mantener la licencia al distribuir
+
+❌ No es responsabilidad de:
+- Errores o problemas de funcionamiento
+- Daños causados por el uso del software
+
+---
+
+## Autores
+
+Universidad EAFIT - Ingeniería de Sistemas  
+Curso: Organización de Computadores 2026-1  
+Docente: José Luis Montoya Pareja  
+Proyecto 2: ALU y Nuevos Comandos
+
+**Estudiantes Responsables:**
+- [Nombre Estudiante 1]
+- [Nombre Estudiante 2]
+
+---
+
+Fecha de Licencia: 20 de abril de 2026
