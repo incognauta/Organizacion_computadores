@@ -26,5 +26,28 @@ CHIP Shifter {
                     // correspondiente
     
     PARTS:
-    // Incluya su código aquí
+    Mux(a=in[0], b=in[15], sel=direction, out=result);
+    
+    // ===== BITS DE SALIDA out[0..15] =====
+    // Patrón para cada bit:
+    // out[i] = Mux(a=in[i+1], b=in[i-1], sel=direction)
+    // Donde: a=input para SHR, b=input para SHL
+    
+    // out[0]:  direction=0 -> 0,       direction=1 -> in[1]
+    Mux(a=in[1], b=false, sel=direction, out=out[0]);
+    Mux(a=in[2], b=in[0], sel=direction, out=out[1]);
+    Mux(a=in[3], b=in[1], sel=direction, out=out[2]);
+    Mux(a=in[4], b=in[2], sel=direction, out=out[3]);
+    Mux(a=in[5], b=in[3], sel=direction, out=out[4]);
+    Mux(a=in[6], b=in[4], sel=direction, out=out[5]);
+    Mux(a=in[7], b=in[5], sel=direction, out=out[6]);
+    Mux(a=in[8], b=in[6], sel=direction, out=out[7]);
+    Mux(a=in[9], b=in[7], sel=direction, out=out[8]);
+    Mux(a=in[10], b=in[8], sel=direction, out=out[9]);
+    Mux(a=in[11], b=in[9], sel=direction, out=out[10]);
+    Mux(a=in[12], b=in[10], sel=direction, out=out[11]);
+    Mux(a=in[13], b=in[11], sel=direction, out=out[12]);
+    Mux(a=in[14], b=in[12], sel=direction, out=out[13]);
+    Mux(a=in[15], b=in[13], sel=direction, out=out[14]);
+    Mux(a=false, b=in[14], sel=direction, out=out[15]);
 }
