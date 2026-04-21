@@ -34,16 +34,22 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/) y est
 
 ## Secciones Futuras
 
-### [0.2.0] - Shifter Implementation
-**Fecha Estimada:** 2026-04-24
+## [0.2.0] - Shifter Implementation - 2026-04-20
+**Estado: ✅ COMPLETADO**
 
 #### Agregado
-- Shifter.hdl: Circuito de desplazamiento de bits
-- Shifter.md5: Checksum de validación
-- Documentación del Shifter
+- Shifter.hdl: Circuito de desplazamiento de bits a izquierda/derecha
+- Documentación completa en `/docs/shifter-notes.md`
+- Pseudocódigo y diagramas de flujo
 
 #### Cambios
-- N/A
+- Creación de archivo base Shifter.hdl (20 de abril)
+- Implementación completa con 17 multiplexores
+
+#### Notas Técnicas
+- Componentes: 17x Mux (1 para result + 16 para out[16])
+- Lógica combinacional pura
+- Casos de prueba verificados en documentación
 
 #### Corregido
 - N/A
