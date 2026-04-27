@@ -27,23 +27,25 @@ Practicar los conceptos vistos en clase durante todo el semestre desde el diseñ
 ## 📂 Estructura del Proyecto
 
 ```
-Proyecto #2/
+.
 ├── README.md                 # Este archivo
 ├── CONTRIBUTORS.md           # Roles y contribuciones del equipo
 ├── CHANGELOG.md              # Historial de cambios
 ├── LICENSE                   # Licencia del proyecto
-├── Shifter.hdl              # Circuito del Shifter (Punto 1)
-├── Shifter.md5              # Checksum del Shifter
-├── ALU.hdl                  # ALU con Shifter integrado (Punto 2)
-├── ALU.md5                  # Checksum del ALU
-├── Memory.hdl               # Memoria RAM (Punto 3)
-├── Memory.md5               # Checksum de Memory
-├── CPU.hdl                  # CPU con ALU (Punto 3)
-├── CPU.md5                  # Checksum de CPU
-├── Computer.hdl             # Computadora completa (Punto 3)
-├── Computer.md5             # Checksum de Computer
-├── design.txt               # Especificación de instrucciones Shift (Punto 4)
-└── design.md5               # Checksum de design.txt
+└── Proyecto #2/              # Entregables del Proyecto 2
+    ├── Shifter.hdl           # Circuito del Shifter (Punto 1)
+    ├── Shifter.md5           # Checksum del Shifter
+    ├── ALU.hdl               # ALU con Shifter integrado (Punto 2)
+    ├── ALU.md5               # Checksum del ALU
+    ├── Memory.hdl            # Memoria RAM (Punto 3)
+    ├── Memory.md5            # Checksum de Memory
+    ├── CPU.hdl               # CPU con ALU (Punto 3)
+    ├── CPU.md5               # Checksum de CPU
+    ├── Computer.hdl          # Computadora completa (Punto 3)
+    ├── Computer.md5          # Checksum de Computer
+    ├── design.txt            # Especificación de instrucciones Shift (Punto 4)
+    └── design.md5            # Checksum de design.txt
+
 ```
 
 ---
