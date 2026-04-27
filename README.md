@@ -116,9 +116,9 @@ Documentación del formato de las instrucciones Shift Left (`<<`) y Shift Right 
 
 | Punto | Tarea | Estado |
 |-------|-------|--------|
-| 1 | Shifter.hdl | ⏳ Pendiente |
-| 2 | ALU.hdl | ⏳ Pendiente |
-| 3 | Memory.hdl, CPU.hdl, Computer.hdl | ⏳ Pendiente |
+| 1 | Shifter.hdl | ✅ Completado |
+| 2 | ALU.hdl | ✅ Completado |
+| 3 | Memory.hdl, CPU.hdl, Computer.hdl | ✅ Completado |
 | 4 | design.txt | ⏳ Pendiente |
 
 ---
@@ -131,4 +131,4 @@ Documentación del formato de las instrucciones Shift Left (`<<`) y Shift Right 
 
 ---
 
-**Última actualización:** 20 de abril de 2026
+**Última actualización:** 27 de abril de 2026

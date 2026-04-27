@@ -35,27 +35,27 @@ Este documento registra las contribuciones y roles de cada miembro del equipo en
 ### Punto 1: Shifter (25%)
 **Responsable:** [Nombre Estudiante 1]
 
-- [ ] Diseñar algoritmo del Shifter
-- [ ] Implementar Shifter.hdl
-- [ ] Validar casos de prueba
-- [ ] Generar Shifter.md5
+- [x] Diseñar algoritmo del Shifter
+- [x] Implementar Shifter.hdl
+- [x] Validar casos de prueba
+- [x] Generar Shifter.md5
 
 ### Punto 2: ALU con Shifter (25%)
 **Responsable:** [Nombre Estudiante 1]
 
-- [ ] Integrar Shifter en ALU
-- [ ] Validar pruebas unitarias
-- [ ] Documentación de cambios
-- [ ] Generar ALU.md5
+- [x] Integrar Shifter en ALU
+- [x] Validar pruebas unitarias
+- [x] Documentación de cambios
+- [x] Generar ALU.md5
 
 ### Punto 3: CPU (40%)
 **Responsable:** [Nombre Estudiante 2]
 
-- [ ] Implementar Memory.hdl
-- [ ] Implementar CPU.hdl
-- [ ] Implementar Computer.hdl
-- [ ] Validar pruebas unitarias
-- [ ] Generar archivos .md5
+- [x] Implementar Memory.hdl
+- [x] Implementar CPU.hdl
+- [x] Implementar Computer.hdl
+- [x] Validar pruebas unitarias
+- [x] Generar archivos .md5
 
 ### Punto 4: Diseño de Instrucciones (10%)
 **Responsable:** [Nombre Estudiante 1]

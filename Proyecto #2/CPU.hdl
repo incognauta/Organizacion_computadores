@@ -1,0 +1,61 @@
+/*********
+ * CPU.hdl – CPU del computador Hack
+ *********/
+CHIP CPU {
+    IN  inM[16],
+        instruction[16],
+        reset;
+    OUT outM[16],
+        writeM,
+        addressM[15],
+        pc[15];
+
+    PARTS:
+    // ===== Tipo de instruccion =====
+    Not(in=instruction[15], out=isA);
+
+    // ===== Registro A =====
+    And(a=instruction[15], b=instruction[5], out=cToA);
+    Or(a=isA, b=cToA, out=loadA);
+    Mux16(a=instruction, b=aluOut, sel=instruction[15], out=inA);
+    ARegister(in=inA, load=loadA, out=outA, out[0..14]=addressM);
+
+    // ===== Registro D =====
+    And(a=instruction[15], b=instruction[4], out=loadD);
+    DRegister(in=aluOut, load=loadD, out=outD);
+
+    // ===== ALU =====
+    Mux16(a=outA, b=inM, sel=instruction[12], out=aluY);
+    ALU(
+        x=outD,
+        y=aluY,
+        zx=instruction[11],
+        nx=instruction[10],
+        zy=instruction[9],
+        ny=instruction[8],
+        f=instruction[7],
+        no=instruction[6],
+        out=aluOut,
+        zr=zrOut,
+        ng=ngOut,
+        result=aluResult
+    );
+
+    // ===== outM y writeM =====
+    Or16(a=aluOut, b=false, out=outM);
+    And(a=instruction[15], b=instruction[3], out=writeM);
+
+    // ===== Jump logic =====
+    And(a=instruction[2], b=ngOut,  out=jlt);
+    And(a=instruction[1], b=zrOut,  out=jeq);
+    Not(in=ngOut, out=notNg);
+    Not(in=zrOut, out=notZr);
+    And(a=notNg,  b=notZr,          out=isPos);
+    And(a=instruction[0], b=isPos,  out=jgt);
+    Or(a=jlt,  b=jeq,               out=jle);
+    Or(a=jle,  b=jgt,               out=doJump);
+    And(a=instruction[15], b=doJump, out=loadPC);
+
+    // ===== Program Counter =====
+    PC(in=outA, load=loadPC, inc=true, reset=reset, out[0..14]=pc);
+}

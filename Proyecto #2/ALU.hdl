@@ -1,0 +1,64 @@
+/*********
+ * ALU.hdl – ALU (Arithmetic Logic Unit)
+ *********/
+CHIP ALU {
+    IN 
+        x[16], y[16],
+        zx, nx, zy, ny, f, no;
+    OUT 
+        out[16], zr, ng, result;
+    
+    PARTS:
+    // ===== Pre-procesar x =====
+    Mux16(a=x, b=false, sel=zx, out=x1);
+    Not16(in=x1, out=x1n);
+    Mux16(a=x1, b=x1n, sel=nx, out=xp);
+    
+    // ===== Pre-procesar y =====
+    Mux16(a=y, b=false, sel=zy, out=y1);
+    Not16(in=y1, out=y1n);
+    Mux16(a=y1, b=y1n, sel=ny, out=yp);
+    
+    // ===== Operaciones normales =====
+    Add16(a=xp, b=yp, out=sumRes);
+    And16(a=xp, b=yp, out=andRes);
+    Mux16(a=andRes, b=sumRes, sel=f, out=normalOp);
+    
+    // ===== Detectar modo Shifter =====
+    Not(in=zx, out=nzx);
+    Not(in=nx, out=nnx);
+    Not(in=zy, out=nzy);
+    Not(in=ny, out=nny);
+    And(a=nzx, b=nnx, out=a1);
+    And(a=a1,  b=nzy, out=a2);
+    And(a=a2,  b=nny, out=a3);
+    And(a=a3,  b=no,  out=isShift);
+    
+    // ===== Negacion normal =====
+    Not16(in=normalOp, out=normalOpNeg);
+    Not(in=isShift, out=notShift);
+    And(a=no, b=notShift, out=applyNeg);
+    Mux16(a=normalOp, b=normalOpNeg, sel=applyNeg, out=normalFinal);
+    
+    // ===== Shifter =====
+    Shifter(in=x, direction=f, out=shiftOut, result=shiftResult);
+    
+    // ===== Seleccionar Shifter vs Normal =====
+    Mux16(a=normalFinal, b=shiftOut, sel=isShift, out=finalOut);
+
+    // ===== Salida final — separar en dos mitades + out completo =====
+    Mux16(a=finalOut, b=finalOut, sel=false,
+          out[0..7]=low,
+          out[8..15]=high,
+          out[15]=ng,
+          out[0..15]=out);
+
+    // ===== zr =====
+    Or8Way(in=low,  out=orLow);
+    Or8Way(in=high, out=orHigh);
+    Or(a=orLow, b=orHigh, out=nonZero);
+    Not(in=nonZero, out=zr);
+    
+    // ===== result =====
+    Mux(a=false, b=shiftResult, sel=isShift, out=result);
+}
