@@ -45,7 +45,6 @@ Practicar los conceptos vistos en clase durante todo el semestre desde el diseñ
     ├── Computer.md5          # Checksum de Computer
     ├── design.txt            # Especificación de instrucciones Shift (Punto 4)
     └── design.md5            # Checksum de design.txt
-
 ```
 
 ---
@@ -121,7 +120,9 @@ Documentación del formato de las instrucciones Shift Left (`<<`) y Shift Right 
 | 1 | Shifter.hdl | ✅ Completado |
 | 2 | ALU.hdl | ✅ Completado |
 | 3 | Memory.hdl, CPU.hdl, Computer.hdl | ✅ Completado |
-| 4 | design.txt | ⏳ Pendiente |
+| 4 | design.txt (Instrucciones Shift) | ✅ Completado |
+
+**📌 PROYECTO 100% COMPLETO** - Fecha entrega: 29 de abril de 2026
 
 ---
 

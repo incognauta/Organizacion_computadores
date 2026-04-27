@@ -2,7 +2,7 @@
 
 ## [1.0.0] - 2026-04-27
 
-**Estado:** Puntos 1, 2 y 3 completados ✅
+**Estado:** Todos los puntos completados ✅
 
 ### Added
 - `Shifter.hdl`: Implementación del circuito de desplazamiento de 1 bit a la 
@@ -25,6 +25,13 @@
 - `Computer.hdl`: Implementación del computador Hack completo integrando 
   CPU, Memory y ROM32K.
 
+- `design.txt`: Especificación completa del formato de instrucciones para 
+  Shift Left (`<<`) y Shift Right (`>>`). Incluye:
+  - Formato binario de instrucciones tipo C
+  - Mapeo de bits de control a la ALU
+  - Condiciones de activación del Shifter
+  - Ejemplos de uso en assembler
+
 ### Tested
 - `Shifter.hdl`: Validado manualmente con los casos de la Tabla 1 del enunciado.
 - `ALU.hdl`: Validado con `ALU-basic.tst` — todos los casos pasan correctamente.
@@ -32,3 +39,4 @@
 - `CPU.hdl`: Validado con `CPU.tst` del proyecto 5 de Nand2Tetris.
 - `Computer.hdl`: Validado con `ComputerAdd.tst` y `ComputerMax.tst` del 
   proyecto 5 de Nand2Tetris.
+- `design.txt`: Validado con checksums MD5 y revisión técnica.

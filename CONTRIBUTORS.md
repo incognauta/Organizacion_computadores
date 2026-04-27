@@ -58,21 +58,21 @@ Este documento registra las contribuciones y roles de cada miembro del equipo en
 - [x] Generar archivos .md5
 
 ### Punto 4: Diseño de Instrucciones (10%)
-**Responsable:** [Nombre Estudiante 1]
+**Responsable:** Juan Manuel Escobar Mejia
 
-- [ ] Especificar formato de instrucciones Shift
-- [ ] Documentar design.txt
-- [ ] Generar design.md5
+- [x] Especificar formato de instrucciones Shift
+- [x] Documentar design.txt
+- [x] Generar design.md5
 
 ---
 
 ## 📅 Cronograma
 
-| Semana | Hito | Responsable |
-|--------|------|-------------|
-| Semana 1 (20-24 abr) | Shifter + ALU | [Nombre Estudiante 1] |
-| Semana 2 (25-27 abr) | CPU completa | [Nombre Estudiante 2] |
-| Semana 3 (28-29 abr) | Documentación + Entrega | Ambos |
+| Semana | Hito | Responsable | Estado |
+|--------|------|-------------|--------|
+| Semana 1 (20-24 abr) | Shifter + ALU | Juan Manuel | ✅ Completado |
+| Semana 2 (25-27 abr) | CPU completa | Juan Andres | ✅ Completado |
+| Semana 3 (27-29 abr) | design.txt + Entrega | Ambos | ✅ Completado |
 
 ---
 
@@ -81,7 +81,8 @@ Este documento registra las contribuciones y roles de cada miembro del equipo en
 | Fecha | Cambio | Justificación |
 |-------|--------|---------------|
 | 2026-04-20 | Asignación inicial | Proyecto iniciado |
-| | | |
+| 2026-04-27 | Completados Puntos 1-3 | Shifter, ALU, Memory, CPU, Computer implementados |
+| 2026-04-27 | Completado Punto 4 | design.txt con especificación de instrucciones Shift |
 
 ---
 

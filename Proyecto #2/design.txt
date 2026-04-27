@@ -1,0 +1,75 @@
+/*********
+ * design.txt – Diseño de instrucciones Shift Left y Shift Right
+ * para la arquitectura Hack extendida
+ *********/
+
+Universidad Eafit - Ingeniería de sistemas
+Organización de computadores 2026-1
+Proyecto 2 - Punto 4
+
+=== Formato instruccion tipo C ===
+
+    111 a cccccc ddd jjj
+    
+    Bits:
+    [15..13] = 111        (identificador instruccion tipo C)
+    [12]     = a          (usar A o M como segundo operando)
+    [11..6]  = cccccc     (bits de control de la ALU: zx nx zy ny f no)
+    [5..3]   = ddd        (destino: A D M)
+    [2..0]   = jjj        (condicion de salto)
+
+=== Mapeo de bits de control a la ALU ===
+
+    instruction[11] = zx
+    instruction[10] = nx
+    instruction[9]  = zy
+    instruction[8]  = ny
+    instruction[7]  = f
+    instruction[6]  = no
+
+=== Condicion de activacion del Shifter ===
+
+    La ALU activa el modo Shifter cuando:
+    zx=0, nx=0, zy=0, ny=0, no=1
+    La direccion del shift la determina f:
+        f=0 → Shift Left
+        f=1 → Shift Right
+
+=== Instruccion Shift Left (dest=reg<<1) ===
+
+    Sintaxis assembler:  dest=reg<<1
+    Ejemplo:             D=D<<1
+
+    Bits de control: zx=0 nx=0 zy=0 ny=0 f=0 no=1
+    cccccc = 000001
+
+    Formato binario completo (ejemplo D=D<<1):
+    111 0 000001 010 000
+        ^         ^
+        a=0       ddd=010 (destino D)
+
+=== Instruccion Shift Right (dest=reg>>1) ===
+
+    Sintaxis assembler:  dest=reg>>1
+    Ejemplo:             D=D>>1
+
+    Bits de control: zx=0 nx=0 zy=0 ny=0 f=1 no=1
+    cccccc = 000011
+
+    Formato binario completo (ejemplo D=D>>1):
+    111 0 000011 010 000
+        ^         ^
+        a=0       ddd=010 (destino D)
+
+=== Tabla resumen ===
+
+    Instruccion | a | cccccc | Descripcion
+    ------------|---|--------|---------------------------
+    dest=reg<<1 | 0 | 000001 | Shift left 1 bit
+    dest=reg>>1 | 0 | 000011 | Shift right 1 bit
+
+=== Ejemplos adicionales ===
+
+    D=M<<1   → 111 1 000001 010 000  (a=1, usa M como fuente)
+    AM=D>>1  → 111 0 000011 110 000  (ddd=110, destino A y M)
+    D=A<<1   → 111 0 000001 010 000  (a=0, usa A como fuente)
