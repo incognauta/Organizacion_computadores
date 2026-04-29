@@ -1,4 +1,4 @@
-# Organización de Computadores - Proyecto 2
+# Organización de Computadores - Proyectos 2 y 3
 
 ## Universidad EAFIT - Ingeniería de Sistemas
 **Período:** 2026-1  
@@ -32,20 +32,62 @@ Practicar los conceptos vistos en clase durante todo el semestre desde el diseñ
 ├── CONTRIBUTORS.md           # Roles y contribuciones del equipo
 ├── CHANGELOG.md              # Historial de cambios
 ├── LICENSE                   # Licencia del proyecto
-└── Proyecto #2/              # Entregables del Proyecto 2
-    ├── Shifter.hdl           # Circuito del Shifter (Punto 1)
-    ├── Shifter.md5           # Checksum del Shifter
-    ├── ALU.hdl               # ALU con Shifter integrado (Punto 2)
-    ├── ALU.md5               # Checksum del ALU
-    ├── Memory.hdl            # Memoria RAM (Punto 3)
-    ├── Memory.md5            # Checksum de Memory
-    ├── CPU.hdl               # CPU con ALU (Punto 3)
-    ├── CPU.md5               # Checksum de CPU
-    ├── Computer.hdl          # Computadora completa (Punto 3)
-    ├── Computer.md5          # Checksum de Computer
-    ├── design.txt            # Especificación de instrucciones Shift (Punto 4)
-    └── design.md5            # Checksum de design.txt
+├── Proyecto #2/              # Entregables del Proyecto 2
+│   ├── Shifter.hdl           # Circuito del Shifter (Punto 1)
+│   ├── Shifter.md5           # Checksum del Shifter
+│   ├── ALU.hdl               # ALU con Shifter integrado (Punto 2)
+│   ├── ALU.md5               # Checksum del ALU
+│   ├── Memory.hdl            # Memoria RAM (Punto 3)
+│   ├── Memory.md5            # Checksum de Memory
+│   ├── CPU.hdl               # CPU con ALU (Punto 3)
+│   ├── CPU.md5               # Checksum de CPU
+│   ├── Computer.hdl          # Computadora completa (Punto 3)
+│   ├── Computer.md5          # Checksum de Computer
+│   ├── design.txt            # Especificación de instrucciones Shift (Punto 4)
+│   └── design.md5            # Checksum de design.txt
+└── proyecto3/                # Entregables del Proyecto 3
+    └── HackAssembler/
+        ├── docs/             # API.md, DESIGN.md, USER_GUIDE.md
+        ├── src/              # Codigo fuente Java + .md5
+        │   ├── AssemblerException.java
+        │   ├── Code.java
+        │   ├── SymbolTable.java
+        │   ├── Parser.java
+        │   ├── HackAssembler.java
+        │   └── HackDisassembler.java
+        ├── test/             # Suite de pruebas + .md5
+        │   └── HackAssemblerTest.java
+        └── README.md
 ```
+
+---
+
+## 📋 Proyecto 3: Traductor y Desensamblador del Assembler Hack
+
+### Objetivo
+Implementar en Java un traductor (`.asm → .hack`) y un desensamblador
+(`.hack → .asm`) compatibles con el computador Hack extendido con las
+instrucciones de shift (`<<1` y `>>1`) del Proyecto 2.
+
+### Componentes
+- **HackAssembler**: 6 clases con responsabilidad única
+  (`Code`, `SymbolTable`, `Parser`, `HackAssembler`, `HackDisassembler`,
+  `AssemblerException`).
+- **Algoritmo de dos pasadas** para resolver referencias hacia adelante.
+- **Pruebas unitarias** sin dependencias externas (sin JUnit, sin Maven).
+- **Documentación completa** en `proyecto3/HackAssembler/docs/`.
+
+### Uso rápido
+
+```
+cd proyecto3/HackAssembler/src
+javac *.java
+java HackAssembler Prog.asm        # genera Prog.hack
+java HackAssembler -d Prog.hack    # genera ProgDis.asm
+```
+
+Detalles en
+[proyecto3/HackAssembler/docs/USER_GUIDE.md](proyecto3/HackAssembler/docs/USER_GUIDE.md).
 
 ---
 

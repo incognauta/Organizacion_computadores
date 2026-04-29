@@ -1,5 +1,46 @@
 # Changelog
 
+## [2.0.0] - 2026-04-28
+
+**Proyecto 3** — Traductor y desensamblador del assembler Hack.
+
+### Added
+- `proyecto3/HackAssembler/src/AssemblerException.java`: Excepción
+  propia con número de línea para reportes uniformes "Error en linea N".
+- `proyecto3/HackAssembler/src/Code.java`: Tabla de traducción
+  mnemónico ↔ bits para los campos `comp`, `dest` y `jump`. Incluye
+  las extensiones de shift (`<<1`, `>>1`) y soporta traducción inversa
+  para el desensamblador.
+- `proyecto3/HackAssembler/src/SymbolTable.java`: Diccionario
+  símbolo → dirección con los predefinidos del lenguaje Hack
+  (R0–R15, SP, LCL, ARG, THIS, THAT, SCREEN, KBD).
+- `proyecto3/HackAssembler/src/Parser.java`: Lector sintáctico que
+  descarta comentarios y blancos, identifica tipo de instrucción
+  (A, C, L) y extrae los campos correspondientes.
+- `proyecto3/HackAssembler/src/HackAssembler.java`: Orquestador
+  `.asm → .hack` con algoritmo de dos pasadas. Punto de entrada del
+  programa.
+- `proyecto3/HackAssembler/src/HackDisassembler.java`: Orquestador
+  `.hack → .asm` de una sola pasada. Aplica convención canónica
+  para shifts ambiguos (`a=0` → forma con A).
+- `proyecto3/HackAssembler/test/HackAssemblerTest.java`: Suite de
+  pruebas manuales con `main()` que imprime PASS/FAIL. Cubre Code,
+  SymbolTable, Parser y end-to-end (assemble, disassemble, roundtrip).
+- Documentación en `proyecto3/HackAssembler/docs/`:
+  `DESIGN.md`, `API.md`, `USER_GUIDE.md`.
+- Archivos `.md5` por cada `.java` para verificación de integridad.
+
+### Tested
+- Traducción de instrucciones tipo A con valores y símbolos.
+- Traducción de instrucciones tipo C completas, sin dest, sin jump.
+- Detección de etiquetas en pasada 1 y referencias hacia adelante.
+- Asignación automática de variables desde RAM[16].
+- Traducción de las 6 formas del shift (`A/D/M` × `<<1/>>1`).
+- Roundtrip: ensamblar → desensamblar → re-ensamblar produce
+  binario idéntico.
+- Validaciones de error: `@N` fuera de rango, símbolos inválidos,
+  etiquetas duplicadas, mnemónicos inexistentes.
+
 ## [1.0.0] - 2026-04-27
 
 **Estado:** Todos los puntos completados ✅

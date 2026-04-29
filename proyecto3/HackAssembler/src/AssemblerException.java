@@ -3,8 +3,9 @@
  * desensamblador para reportar errores de sintaxis o semántica en el
  * archivo de entrada. Lleva opcionalmente el número de línea donde se
  * detectó el problema, para que el mensaje al usuario sea preciso.
- * Autor 1: [tu nombre]
- * Autor 2: [nombre compañero]
+ * Autor 1: Juan Andres Salcedo
+ * Autor 2:  Juan Manuel Escobar
+
  *********/
 
 /**
