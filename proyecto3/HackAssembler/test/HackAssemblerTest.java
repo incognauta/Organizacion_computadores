@@ -307,7 +307,7 @@ public class HackAssemblerTest {
             "@i\nD=M\n" +
             "@10\nD=D-A\n" +
             "@END\nD;JGT\n" +
-            "@sum\nM=M+D\n" +
+            "@sum\nM=D+M\n" +
             "@LOOP\n0;JMP\n" +
             "(END)\n" +
             "@END\n0;JMP\n";
