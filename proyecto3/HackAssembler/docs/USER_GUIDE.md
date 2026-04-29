@@ -7,8 +7,7 @@
   javac -version
   java -version
   ```
-  Si solo tienes el JRE (`java` funciona pero `javac` no), instala
-  un JDK desde [adoptium.net](https://adoptium.net/).
+
 
 ## Compilación
 

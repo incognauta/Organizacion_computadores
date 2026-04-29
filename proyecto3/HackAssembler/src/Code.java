@@ -7,8 +7,8 @@
  * Esta clase es PURA: no abre archivos, no parsea lineas, no asigna
  * direcciones. Es un diccionario consultable en ambas direcciones.
  *
- * Autor 1: [tu nombre]
- * Autor 2: [nombre compañero]
+ * Autor 1: Juan Andres Salcedo
+ * Autor 2: Juan Manuel Escobar
  *********/
 
 import java.util.HashMap;

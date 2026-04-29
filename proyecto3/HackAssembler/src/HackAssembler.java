@@ -16,8 +16,8 @@
  *   java HackAssembler Prog.asm        -> genera Prog.hack
  *   java HackAssembler -d Prog.hack    -> genera ProgDis.asm
  *
- * Autor 1: [tu nombre]
- * Autor 2: [nombre compañero]
+ * Autor 1: Juan Andres Salcedo
+ * Autor 2: Juan Manuel Escobar
  *********/
 
 import java.io.BufferedWriter;

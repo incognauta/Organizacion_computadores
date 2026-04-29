@@ -5,8 +5,8 @@
 **2026-1**
 
 **Integrantes proyecto 3**
-[Nombre alumno 1]
-[Nombre alumno 2]
+Juan Andres Salcedo
+Juan Manuel Escobar
 
 Traductor (assembler) y desensamblador del lenguaje Hack extendido con
 las instrucciones de shift (`<<1` y `>>1`) que se agregaron a la ALU

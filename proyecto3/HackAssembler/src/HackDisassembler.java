@@ -13,8 +13,8 @@
  * El comportamiento del programa no cambia porque el binario es el
  * mismo; solo cambia el texto que se imprime.
  *
- * Autor 1: [tu nombre]
- * Autor 2: [nombre compañero]
+ * Autor 1: Juan Andres Salcedo
+ * Autor 2: Juan Manuel Escobar
  *********/
 
 import java.io.BufferedReader;
