@@ -11,8 +11,8 @@
  *   - Parser: limpieza de comentarios, extraccion de campos, shift
  *   - End-to-end: assemble + disassemble + roundtrip
  *
- * Autor 1: [tu nombre]
- * Autor 2: [nombre compañero]
+ * Autor 1: Juan Andres Salcedo
+ * Autor 2: Juan Manuel Escobar
  *********/
 
 import java.io.BufferedReader;
