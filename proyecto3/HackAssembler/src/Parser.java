@@ -9,8 +9,8 @@
  * sintaxis. Reconoce las extensiones de shift (<<1 y >>1) porque toma
  * el campo comp como string completo sin tokenizar internamente.
  *
- * Autor 1: [tu nombre]
- * Autor 2: [nombre compañero]
+ * Autor 1: Juan Andres Salcedo
+ * Autor 2:  Juan Manuel Escobar
  *********/
 
 import java.io.BufferedReader;
