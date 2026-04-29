@@ -8,7 +8,7 @@
  * direcciones. Es un diccionario consultable en ambas direcciones.
  *
  * Autor 1: Juan Andres Salcedo
- * Autor 2: Juan Manuel Escobar
+ * Autor 2:  Juan Manuel Escobar
  *********/
 
 import java.util.HashMap;
