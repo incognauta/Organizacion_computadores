@@ -20,7 +20,7 @@ Practicar los conceptos vistos en clase durante todo el semestre desde el diseñ
 | Nombre | Rol |
 |--------|-----|
 | [Juan Manuel Escobar] | Desarrollador |
-| [Juan Andres Salsedo] | Desarrollador |
+| [Juan Andres Salcedo] | Desarrollador |
 
 ---
 
