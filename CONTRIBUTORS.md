@@ -9,7 +9,7 @@ Este documento registra las contribuciones y roles de cada miembro del equipo en
 | Nombre | Rol | Tareas Asignadas | % Contribución |
 |--------|-----|------------------|-----------------|
 | [Juan Manuel Escobar Mejia] | Líder | Coordinación, Shifter, ALU | 50% |
-| [Juan Andres Salsedo] | Desarrollador | Memory, CPU, Computer | 50% |
+| [Juan Andres Salcedo] | Desarrollador | Memory, CPU, Computer | 50% |
 | **Total** | | | **100%** |
 
 ---
