@@ -14,7 +14,7 @@
  * mismo; solo cambia el texto que se imprime.
  *
  * Autor 1: Juan Andres Salcedo
- * Autor 2:  Juan Manuel Escobars
+ * Autor 2:  Juan Manuel Escobar
  *********/
 
 import java.io.BufferedReader;
